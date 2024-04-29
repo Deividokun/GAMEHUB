@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+
+:root {
+  --background-image: url('https://preview.redd.it/been-practising-in-adobe-illustrator-and-i-made-this-neon-v0-oog08qvto2k91.jpg?auto=webp&s=bd7b6b27e7a145b36f1cf2b74e6841ed6e2369d0');
+  --grid-width: 560px;
+  --cell-size: 100px;
+  --cell-gap: 0.3125rem;
+  --button-width: 100px;
+  --button-padding: 10px;
+  --button-border-radius: 10px;
+  --button-background-color: rgb(255, 2, 2);
+  --button-margin: 20px;
+  --button-font-weight: bolder;
+  --font-family: 'Noto Sans JP', sans-serif;
+  --font-size: 24px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-image: var(--background-image);
+  background-size: cover;
+  background-position: center;
+  font-family: var(--font-family);
+}
+
+main {
+  width: 100%;
+  height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+#hdr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid-container {
+  display: grid;
+  width: var(--grid-width);
+  grid-template-columns: repeat(4, var(--cell-size));
+  grid-template-rows: repeat(4, var(--cell-size));
+  gap: var(--cell-gap);
+  justify-content: center;
+}
+
+#pagain {
+  cursor: pointer;
+  padding: var(--button-padding);
+  border: black 2px solid;
+  border-radius: var(--button-border-radius);
+  font-weight: var(--button-font-weight);
+  background-color: var(--button-background-color);
+  width: var(--button-width);
+}
+
+img {
+  width: 90px;
+  height: 90px;
+}
+
+.card {
+  width: var(--cell-size);
+  height: var(--cell-size);
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.999s;
+}
+
+.card.is-flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.card-front {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  justify-content: center;
+  font-size: var(--font-size);
+  transform: rotateY(0deg);
+}
+
+.card-back {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  justify-content: center;
+  font-size: var(--font-size);
+  transform: rotateY(180deg);
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border: 2px solid black;
+  border-radius: 5px;
+  z-index: 999;
+}
+
+.POPUP {
+  display: none;
+}
+
+.home {
+  width: var(--button-width);
+  border-radius: var(--button-border-radius);
+  background-color: var(--button-background-color);
+  margin: var(--button-margin);
+  padding: var(--button-padding);
+  font-weight: var(--button-font-weight);
+}
+
+@media screen and (max-width: 768px) {
+  .grid-container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(4, var(--cell-size));
+    grid-template-rows: repeat(4, var(--cell-size));
+    gap: var(--cell-gap);
+    justify-content: center;
+  }
+}

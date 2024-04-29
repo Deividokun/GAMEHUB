@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+
+:root {
+  --button-padding-vertical: 15px;
+  --button-padding-horizontal: 30px;
+  --button-font-size: 20px;
+  --button-background-color: #4caf50;
+  --button-color: white;
+  --button-hover-background-color: #45a049;
+  --button-hover-color: #ffffff;
+  --button-border-radius: 1rem;
+  --button-hover-scale: 1.1;
+  --button-transition-duration: 0.3s;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-image: url('https://addons-media.operacdn.com/media/CACHE/images/themes/85/91085/1.0-rev1/images/5be65c4c-596c-4fac-91f4-d5ba90ef5038/3fe74bb52208bf4e3e82288ead56a482.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+header {
+  text-align: center;
+}
+
+#GamesHub_datainfo {
+  margin-top: 20px;
+}
+
+#GamesHub_datainfo button {
+  margin: 10px;
+  padding: var(--button-padding-vertical) var(--button-padding-horizontal);
+  font-size: var(--button-font-size);
+  background-color: var(--button-background-color);
+  color: var(--button-color);
+  border: none;
+  cursor: pointer;
+  transition: background-color var(--button-transition-duration),
+    color var(--button-transition-duration);
+  border-radius: var(--button-border-radius);
+}
+
+#GamesHub_datainfo button:hover {
+  background-color: var(--button-hover-background-color);
+  color: var(--button-hover-color);
+  transform: scale(var(--button-hover-scale));
+}
+
+@media screen and (max-width: 768px) {
+  #GamesHub_datainfo button {
+    padding: 10px 20px;
+    font-size: 16px;
+    transition: transform var(--button-transition-duration);
+  }
+
+  #GamesHub_datainfo button:hover {
+    transform: scale(var(--button-hover-scale));
+  }
+}

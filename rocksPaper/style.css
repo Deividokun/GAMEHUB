@@ -1,0 +1,105 @@
+:root {
+  --font-family: 'Jersey 10', sans-serif;
+  --font-weight: 400;
+  --font-style: normal;
+  --font-size: 22px;
+  --background-color: bisque;
+  --button-border-color: solid black;
+  --button-border-width: 2px;
+  --button-padding: 5px;
+  --button-border-radius: 20px;
+  --input-border-radius: 10px;
+  --input-padding: 5px;
+  --header-margin-top: 2.5rem;
+  --nav-width: 20%;
+  --counter-width: 40%;
+  --movimientos-data-width: 30%;
+  --movimientos-data-font-size: 40px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+  font-weight: var(--font-weight);
+  font-style: var(--font-style);
+  font-size: var(--font-size);
+  overflow: hidden;
+  background-image: url('https://images.unsplash.com/photo-1608231883522-2efb1897a608?q=80&w=1890&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+main {
+  width: 100%;
+  height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+header {
+  margin: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav {
+  width: var(--nav-width);
+  gap: 0.3125rem;
+}
+
+.counter {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 100px;
+}
+
+.movimientos-data {
+  font-size: var(--movimientos-data-font-size);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.home {
+  width: 100px;
+  border: var(--button-border-color) var(--button-border-width) solid;
+  padding: var(--button-padding);
+  border-radius: var(--button-border-radius);
+  background-color: var(--background-color);
+  border: solid rgb(255, 255, 255) 0.2rem;
+}
+
+input {
+  border-radius: var(--input-border-radius);
+  padding: var(--input-padding);
+}
+
+.U12,
+.U2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+h4 {
+  color: brown;
+  font-size: 2.5rem;
+}
+button {
+  background-color: red;
+  border: solid 2px black;
+  border-radius: 0.9375rem;
+  padding: 0.3125rem;
+}

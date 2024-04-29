@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+
+:root {
+  --primary-color: brown;
+  --secondary-color: rgb(255, 2, 2);
+  --button-width: 100px;
+  --button-border-radius: 10px;
+  --button-font-size: 20px;
+  --play-again-width: 80px;
+  --play-again-font-size: 20px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Tilt Neon', sans-serif;
+}
+
+h1 {
+  width: 100%;
+  text-align: center;
+  margin-top: 2%;
+  color: var(--primary-color);
+}
+
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#zenbu {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#players {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5625rem;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  margin-bottom: 40px;
+}
+
+.Table {
+  width: 40%;
+  height: 55svh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  border: 2px solid black;
+  background-image: url('https://www.transparenttextures.com/patterns/black-thread.png');
+}
+
+.celda {
+  width: 100%;
+  border: solid 2px black;
+  cursor: pointer;
+}
+
+.RojoB,
+.BlackCross {
+  font-size: 60px;
+  text-align: center;
+  margin-top: 27px;
+}
+
+.Play_agaiin {
+  width: var(--button-width);
+  min-width: var(--play-again-width);
+  font-size: var(--button-font-size);
+  font-weight: bolder;
+  margin-top: 2%;
+  color: var(--primary-color);
+  padding: 10px;
+  border: 3px solid black;
+  border-radius: var(--button-border-radius);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.Play_agaiin:hover {
+  transform: scale(1.1);
+}
+
+.hover1,
+.hover2 {
+  font-size: 24px;
+  background-color: red;
+}
+
+.home {
+  width: var(--button-width);
+  border-radius: var(--button-border-radius);
+  background-color: var(--secondary-color);
+  font-weight: bolder;
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  .Table {
+    width: 100%;
+    height: 55svh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    border: 2px solid black;
+    background-image: url('https://www.transparenttextures.com/patterns/black-thread.png');
+  }
+
+  .Play_agaiin {
+    width: var(--play-again-width);
+    font-size: var(--play-again-font-size);
+    font-weight: bolder;
+    margin-top: 2%;
+    color: var(--primary-color);
+    padding: 10px;
+    border: 3px solid black;
+    border-radius: var(--button-border-radius);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+
+  .RojoB,
+  .BlackCross {
+    font-size: 35px;
+    text-align: center;
+    margin-top: 35px;
+  }
+}
